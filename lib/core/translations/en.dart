@@ -18,4 +18,17 @@ Map<String, String> en = {
   TranslationKeys.description: "Find it here, buy it now!",
   TranslationKeys.login: "Login",
   TranslationKeys.register: "Register",
+
+  // validators
+  TranslationKeys.nameRequired: 'Name is required',
+  TranslationKeys.nameLength: 'Name must be at least 3 characters long',
+  TranslationKeys.emailRequired: 'Email is required',
+  TranslationKeys.emailValid: 'Enter a valid email address',
+  TranslationKeys.passwordRequired: 'Password is required',
+  TranslationKeys.passwordLength: 'Password must be at least 6 characters long',
+  TranslationKeys.confirmPasswordRequired: 'Confirm password is required',
+  TranslationKeys.passwordNotMatch: 'Passwords do not match',
+  TranslationKeys.phoneRequired: 'Phone number is required',
+  TranslationKeys.phoneValid: 'Enter a valid 11-digit phone number',
+  TranslationKeys.fillAllFields: 'Please fill all fields',
 };
