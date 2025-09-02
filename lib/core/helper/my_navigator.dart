@@ -21,4 +21,8 @@ abstract class MyNavigator {
       );
     }
   }
+
+  static pop() {
+    Get.back();
+  }
 }

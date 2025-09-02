@@ -6,6 +6,7 @@ abstract class EndPoints {
   static const String getUserData = 'get_user_data';
   static const String refreshToken = 'refresh_token';
   static const String updateProfile = 'update_profile';
+  static const String deleteUser = 'delete_user';
   static const String changePassword = 'change_password';
   static const String categories = 'categories';
   static const String sliders = 'sliders';

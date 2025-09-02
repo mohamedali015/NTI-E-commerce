@@ -7,7 +7,7 @@ import 'package:nti_ecommerce/features/splash_and_onboarding/view/splash_screen.
 import 'core/cache/cache_data.dart';
 import 'core/cache/cache_helper.dart';
 import 'core/translations/translation_helper.dart';
-import 'features/home/manager/user_cubit/user_cubit.dart';
+import 'features/profile/manager/user_cubit/user_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
