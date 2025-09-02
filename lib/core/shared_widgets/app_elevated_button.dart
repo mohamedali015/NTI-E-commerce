@@ -34,8 +34,6 @@ class AppElevatedButton extends StatelessWidget {
         ),
         backgroundColor:
             WidgetStateProperty.all(backgroundColor ?? AppColors.primary),
-        foregroundColor:
-            WidgetStateProperty.all(foregroundColor ?? AppColors.white),
         padding: WidgetStateProperty.all(
           MyResponsive.paddingSymmetric(context, horizontal: 0, vertical: 15),
         ),
@@ -49,7 +47,8 @@ class AppElevatedButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         buttonText,
-        style: AppTextStyles.SemiBold_W600_23(context),
+        style: AppTextStyles.SemiBold_W600_20(context,
+            color: foregroundColor ?? AppColors.white),
       ),
     );
   }

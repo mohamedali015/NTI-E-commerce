@@ -16,8 +16,19 @@ Map<String, String> ar = {
       "تتبع طلبك في الوقت الفعلي واحصل عليه مباشرة إلى باب منزلك. تسليم سريع، تحديثات في الوقت الفعلي، وضمان الرضا.",
   TranslationKeys.title: "تريد\nالأصلي، هنا\nاذهب!",
   TranslationKeys.description: "ابحث عنه هنا، اشتريه الآن!",
+
+  // auth screens
   TranslationKeys.login: "تسجيل الدخول",
   TranslationKeys.register: "تسجيل",
+  TranslationKeys.welcomeLogin: "مرحبا بعودتك!",
+  TranslationKeys.email: "البريد الإلكتروني",
+  TranslationKeys.password: "كلمة المرور",
+  TranslationKeys.welcomeRegister: "أنشئ حسابًا",
+  TranslationKeys.name: "الاسم الكامل",
+  TranslationKeys.phone: "رقم الهاتف",
+  TranslationKeys.confirmPassword: "تأكيد كلمة المرور",
+  TranslationKeys.politics:
+      "بالنقر على زر التسجيل، فإنك توافق\nعلى العرض العام",
 
   // validators
   TranslationKeys.nameRequired: 'الاسم مطلوب',
@@ -32,4 +43,24 @@ Map<String, String> ar = {
   TranslationKeys.phoneRequired: 'رقم الهاتف مطلوب',
   TranslationKeys.phoneValid: 'أدخل رقم هاتف صالح مكون من 11 رقمًا',
   TranslationKeys.fillAllFields: 'يرجى ملء جميع الحقول',
+
+  // home screen
+  TranslationKeys.home: "الرئيسية",
+  TranslationKeys.items: "المنتجات",
+  TranslationKeys.person: "الشخص",
+  TranslationKeys.searchHint: "ابحث عن أي منتج..",
+  TranslationKeys.allFeatured: "جميع المميز",
+  TranslationKeys.recommended: "موصى به",
+
+  // profile screen
+  TranslationKeys.myProfile: "ملفي الشخصي",
+  TranslationKeys.myOrders: "طلباتي",
+  TranslationKeys.myFavorites: "مفضلتي",
+  TranslationKeys.settings: "الإعدادات",
+  TranslationKeys.logout: "تسجيل الخروج",
+  TranslationKeys.logoutMessage: "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+  TranslationKeys.cancel: "إلغاء",
+  TranslationKeys.confirm: "تأكيد",
+  TranslationKeys.save: "حفظ",
+  TranslationKeys.deleteAccount: "حذف الحساب",
 };

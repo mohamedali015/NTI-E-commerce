@@ -57,8 +57,9 @@ class OnBoardingScreen extends StatelessWidget {
                               height: MyResponsive.height(context, value: 30))
                           : AppTextButton(
                               text: TranslationKeys.skip.tr,
-                              textStyle: AppTextStyles.SemiBold_W600_18(context)
-                                  .copyWith(color: AppColors.black),
+                              textStyle: AppTextStyles.SemiBold_W600_18(
+                                context,
+                              ),
                               onPressed: onBoardingCubit.skip,
                             ),
                     ],
@@ -77,8 +78,8 @@ class OnBoardingScreen extends StatelessWidget {
                               width: MyResponsive.width(context, value: 50))
                           : AppTextButton(
                               text: TranslationKeys.prev.tr,
-                              textStyle: AppTextStyles.SemiBold_W600_18(context)
-                                  .copyWith(color: AppColors.lightGray),
+                              textStyle: AppTextStyles.SemiBold_W600_18(context,
+                                  color: AppColors.lightGray),
                               onPressed: onBoardingCubit.prevPage,
                             ),
                       Spacer(),
@@ -102,8 +103,8 @@ class OnBoardingScreen extends StatelessWidget {
                                 onBoardingCubit.pages.length - 1
                             ? TranslationKeys.getStarted.tr
                             : TranslationKeys.next.tr,
-                        textStyle: AppTextStyles.SemiBold_W600_18(context)
-                            .copyWith(color: AppColors.primary),
+                        textStyle: AppTextStyles.SemiBold_W600_18(context,
+                            color: AppColors.primary),
                         onPressed: onBoardingCubit.nextPage,
                       ),
                     ],

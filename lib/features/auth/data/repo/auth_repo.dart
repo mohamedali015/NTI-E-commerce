@@ -2,13 +2,14 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:nti_ecommerce/core/cache/cache_data.dart';
-import 'package:nti_ecommerce/features/home/data/model/user_model.dart';
+import 'package:nti_ecommerce/features/profile/data/model/user_model.dart';
 
 import '../../../../core/cache/cache_helper.dart';
 import '../../../../core/cache/cache_key.dart';
 import '../../../../core/network/api_helper.dart';
 import '../../../../core/network/api_response.dart';
 import '../../../../core/network/end_points.dart';
+import '../models/login_response_model.dart';
 
 class AuthRepo {
   // singleton

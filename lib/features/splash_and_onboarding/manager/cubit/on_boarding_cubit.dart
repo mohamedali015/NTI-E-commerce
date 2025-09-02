@@ -61,7 +61,7 @@ class OnBoardingCubit extends Cubit<OnBoardingState> {
 
   void skip() {
     currentIndex = pages.length - 1;
-    pageController.jumpTo(pages.length - 1);
+    pageController.jumpToPage(pages.length - 1);
     emit(OnBoardingChangePageState());
   }
 }

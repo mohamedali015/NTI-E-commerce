@@ -32,8 +32,8 @@ class CustomPage extends StatelessWidget {
           ),
           Text(
             title,
-            style: AppTextStyles.ExtraBold_W800_24(context)
-                .copyWith(color: AppColors.black),
+            style: AppTextStyles.ExtraBold_W800_24(context,
+                color: AppColors.black),
           ),
           SizedBox(
             height: MyResponsive.height(context, value: 10),
@@ -41,8 +41,8 @@ class CustomPage extends StatelessWidget {
           Text(
             description,
             textAlign: TextAlign.center,
-            style: AppTextStyles.SemiBold_W600_14(context)
-                .copyWith(color: AppColors.grey),
+            style:
+                AppTextStyles.SemiBold_W600_14(context, color: AppColors.grey),
           ),
         ],
       ),
