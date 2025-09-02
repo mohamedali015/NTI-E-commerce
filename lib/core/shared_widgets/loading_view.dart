@@ -10,7 +10,7 @@ class LoadingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: MyResponsive.height(context, value: 60),
+      height: MyResponsive.height(context, value: 70),
       decoration: BoxDecoration(
         color: AppColors.primary,
         borderRadius: BorderRadius.circular(4),

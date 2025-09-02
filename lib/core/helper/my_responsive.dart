@@ -12,12 +12,12 @@ abstract class MyResponsive {
 
   static EdgeInsets paddingSymmetric(
     context, {
-    required double horizontal,
-    required double vertical,
+    double? horizontal,
+    double? vertical,
   }) {
     return EdgeInsets.symmetric(
-      horizontal: width(context, value: horizontal),
-      vertical: height(context, value: vertical),
+      horizontal: width(context, value: horizontal ?? 0),
+      vertical: height(context, value: vertical ?? 0),
     );
   }
 }

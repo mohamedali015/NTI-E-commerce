@@ -13,7 +13,7 @@ import '../../../core/helper/my_navigator.dart';
 import '../../../core/shared_widgets/app_elevated_button.dart';
 import '../../../core/shared_widgets/loading_view.dart';
 import '../../../core/translations/translation_keys.dart';
-import '../../home/manager/user_cubit/user_cubit.dart';
+import '../../profile/manager/user_cubit/user_cubit.dart';
 import '../manager/login_cubit/login_cubit.dart';
 import '../manager/login_cubit/login_state.dart';
 
@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                     listener: (context, state) {
                       if (state is LoginSuccessState) {
                         MySnackbar.success(context, state.message.toString());
-                        UserCubit.get(context).getUserData(user: state.user);
+                        UserCubit.get(context).getUserData();
 
                         MyNavigator.goTo(
                             screen: () => AppHomeScreen(), isReplace: true);
@@ -67,8 +67,9 @@ class LoginScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             AppTextField(
-                                type: TextFieldType.email,
-                                controller: loginCubit.emailController),
+                              type: TextFieldType.email,
+                              controller: loginCubit.emailController,
+                            ),
                             SizedBox(
                               height: MyResponsive.height(context, value: 22),
                             ),

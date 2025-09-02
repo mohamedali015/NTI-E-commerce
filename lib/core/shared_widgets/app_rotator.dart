@@ -17,7 +17,10 @@ class MyRotator extends StatelessWidget {
       angle: CacheData.lang == CacheKeys.keyAR
           ? (isEn ? math.pi : 0)
           : (isEn ? 0 : math.pi),
-      child: AppSvg(path: icon),
+      child: AppSvg(
+        path: icon,
+        fit: BoxFit.scaleDown,
+      ),
     );
   }
 }

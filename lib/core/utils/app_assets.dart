@@ -18,4 +18,13 @@ abstract class AppAssets {
   static const String items = "${basePath}items.svg";
   static const String person = "${basePath}person.svg";
   static const String shopping = "${basePath}shopping.svg";
+
+  // profile screen
+  static const String profileImage = "${basePath}profileImage.png";
+  static const String forwardArrow = "${basePath}forwardArrow.svg";
+  static const String profilePerson = "${basePath}profilePerson.svg";
+  static const String profileShopping = "${basePath}profileShopping.svg";
+  static const String profileSettings = "${basePath}profileSettings.svg";
+  static const String profileFavorite = "${basePath}profileFavorite.svg";
+  static const String profileLogout = "${basePath}profileLogout.svg";
 }

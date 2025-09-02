@@ -66,4 +66,14 @@ abstract class TranslationKeys {
 
   // profile screen
   static const String profile = "Profile";
+  static const String myProfile = "My Profile";
+  static const String save = "Save";
+  static const String deleteAccount = "Delete Account";
+  static const String myOrders = "My Orders";
+  static const String myFavorites = "My Favorites";
+  static const String settings = "Settings";
+  static const String logout = "Log Out";
+  static const String logoutMessage = "Are you sure you want to log out?";
+  static const String cancel = "Cancel";
+  static const String confirm = "Confirm";
 }

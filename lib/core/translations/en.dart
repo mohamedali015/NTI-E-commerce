@@ -16,8 +16,19 @@ Map<String, String> en = {
       "Track your order in real-time and get it delivered straight to your doorstep. Fast delivery, real-time updates, and satisfaction guaranteed.",
   TranslationKeys.title: "You want\nAuthentic, here\nyou go!",
   TranslationKeys.description: "Find it here, buy it now!",
+
+  // auth screens
   TranslationKeys.login: "Login",
   TranslationKeys.register: "Register",
+  TranslationKeys.welcomeLogin: "Welcome\nback!",
+  TranslationKeys.email: "Email",
+  TranslationKeys.password: "Password",
+  TranslationKeys.welcomeRegister: "Create an\naccount",
+  TranslationKeys.name: "Full Name",
+  TranslationKeys.phone: "Phone",
+  TranslationKeys.confirmPassword: "Confirm Password",
+  TranslationKeys.politics:
+      "By clicking the Register button, you agree\nto the public offer",
 
   // validators
   TranslationKeys.nameRequired: 'Name is required',
@@ -31,4 +42,25 @@ Map<String, String> en = {
   TranslationKeys.phoneRequired: 'Phone number is required',
   TranslationKeys.phoneValid: 'Enter a valid 11-digit phone number',
   TranslationKeys.fillAllFields: 'Please fill all fields',
+
+  // home screen
+  TranslationKeys.home: "Home",
+  TranslationKeys.items: "Items",
+  TranslationKeys.person: "Person",
+  TranslationKeys.searchHint: "Search for any product..",
+  TranslationKeys.allFeatured: "All Featured",
+  TranslationKeys.recommended: "Recommended",
+
+  // profile screen
+  TranslationKeys.profile: "Profile",
+  TranslationKeys.myProfile: "My Profile",
+  TranslationKeys.myOrders: "My Orders",
+  TranslationKeys.myFavorites: "My Favorites",
+  TranslationKeys.settings: "Settings",
+  TranslationKeys.logout: "Logout",
+  TranslationKeys.deleteAccount: "Delete Account",
+  TranslationKeys.logoutMessage: "Are you sure you want to logout?",
+  TranslationKeys.cancel: "Cancel",
+  TranslationKeys.save: "Save",
+  TranslationKeys.confirm: "Confirm",
 };

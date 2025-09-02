@@ -13,7 +13,7 @@ class AppSvg extends StatelessWidget {
     required this.path,
     this.height,
     this.width,
-    this.fit = BoxFit.contain,
+    this.fit = BoxFit.scaleDown,
     this.color,
   });
 

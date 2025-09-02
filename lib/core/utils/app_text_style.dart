@@ -54,6 +54,16 @@ abstract class AppTextStyles {
         color: color,
       );
 
+  static TextStyle Medium_W500_18(
+    BuildContext context, {
+    Color color = AppColors.black,
+  }) =>
+      TextStyle(
+        fontSize: MyResponsive.fontSize(context, value: 18),
+        fontWeight: FontWeight.w500,
+        color: color,
+      );
+
   static TextStyle SemiBold_W600_12(
     BuildContext context, {
     Color color = AppColors.black,
@@ -80,6 +90,16 @@ abstract class AppTextStyles {
   }) =>
       TextStyle(
         fontSize: MyResponsive.fontSize(context, value: 18),
+        fontWeight: FontWeight.w600,
+        color: color,
+      );
+
+  static TextStyle SemiBold_W600_20(
+    BuildContext context, {
+    Color color = AppColors.black,
+  }) =>
+      TextStyle(
+        fontSize: MyResponsive.fontSize(context, value: 20),
         fontWeight: FontWeight.w600,
         color: color,
       );

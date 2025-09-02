@@ -32,17 +32,6 @@ class HomeScreen extends StatelessWidget {
                   width: double.infinity,
                   height: MyResponsive.height(context, value: 55),
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  child: AppSvg(
-                    path: AppAssets.logo,
-                    width: MyResponsive.width(context, value: 130),
-                    height: MyResponsive.height(context, value: 45),
-                  ),
-                ),
-                SizedBox(
-                  height: MyResponsive.height(context, value: 30),
-                ),
                 SearchBox(),
                 SizedBox(
                   height: MyResponsive.height(context, value: 15),

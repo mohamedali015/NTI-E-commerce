@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nti_ecommerce/core/helper/my_responsive.dart';
 import 'package:nti_ecommerce/core/shared_widgets/app_svg.dart';
 import 'package:nti_ecommerce/core/translations/translation_keys.dart';
 import 'package:nti_ecommerce/core/utils/app_assets.dart';
 import 'package:nti_ecommerce/core/utils/app_colors.dart';
 
+import '../../../core/utils/app_text_style.dart';
 import '../../items/view/items_screen.dart';
 import '../../profile/view/profile_screen.dart';
 import 'home_screen.dart';
@@ -30,6 +32,19 @@ class _AppHomeScreenState extends State<AppHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        titleTextStyle: AppTextStyles.SemiBold_W600_18(context),
+        title: currentIndex == 2
+            ? Text(TranslationKeys.profile.tr)
+            : AppSvg(
+                path: AppAssets.logo,
+                fit: BoxFit.scaleDown,
+                height: MyResponsive.height(context, value: 50),
+              ),
+      ),
       body: PageView(
         controller: pageController,
         onPageChanged: (index) {
@@ -56,21 +71,21 @@ class _AppHomeScreenState extends State<AppHomeScreen> {
               path: AppAssets.home,
               color: currentIndex == 0 ? AppColors.primary : AppColors.black,
             ),
-            label: TranslationKeys.home,
+            label: TranslationKeys.home.tr,
           ),
           BottomNavigationBarItem(
             icon: AppSvg(
               path: AppAssets.items,
               color: currentIndex == 1 ? AppColors.primary : AppColors.black,
             ),
-            label: TranslationKeys.items,
+            label: TranslationKeys.items.tr,
           ),
           BottomNavigationBarItem(
             icon: AppSvg(
-              path: AppAssets.person,
+              path: AppAssets.profilePerson,
               color: currentIndex == 2 ? AppColors.primary : AppColors.black,
             ),
-            label: TranslationKeys.person,
+            label: TranslationKeys.profile.tr,
           ),
         ],
       ),

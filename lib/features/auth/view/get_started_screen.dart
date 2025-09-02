@@ -53,8 +53,8 @@ class GetStartedScreen extends StatelessWidget {
                 Text(
                   TranslationKeys.title.tr,
                   textAlign: TextAlign.center,
-                  style: AppTextStyles.SemiBold_W600_34(context)
-                      .copyWith(color: AppColors.white),
+                  style: AppTextStyles.SemiBold_W600_34(context,
+                      color: AppColors.white),
                 ),
                 SizedBox(
                   height: MyResponsive.height(context, value: 24),
@@ -62,8 +62,8 @@ class GetStartedScreen extends StatelessWidget {
                 Text(
                   TranslationKeys.description.tr,
                   textAlign: TextAlign.center,
-                  style: AppTextStyles.Regular_W400_14(context)
-                      .copyWith(color: AppColors.darkWhite),
+                  style: AppTextStyles.Regular_W400_14(context,
+                      color: AppColors.darkWhite),
                 ),
                 SizedBox(
                   height: MyResponsive.height(context, value: 24),

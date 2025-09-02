@@ -142,4 +142,23 @@ class ApiHelper {
       ),
     );
   }
+
+  Future<ApiResponse> deleteRequest({
+    required String endPoint,
+    Map<String, dynamic>? data,
+    bool isFormData = true,
+    bool isProtected = false,
+  }) async {
+    return ApiResponse.fromResponse(
+      await dio.delete(
+        endPoint,
+        data: isFormData ? FormData.fromMap(data ?? {}) : data,
+        options: Options(
+          headers: {
+            if (isProtected) 'Authorization': 'Bearer ${CacheData.accessToken}',
+          },
+        ),
+      ),
+    );
+  }
 }

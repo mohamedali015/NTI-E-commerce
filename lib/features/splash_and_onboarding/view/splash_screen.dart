@@ -7,9 +7,8 @@ import '../../../core/cache/cache_helper.dart';
 import '../../../core/cache/cache_key.dart';
 import '../../../core/utils/app_assets.dart';
 import '../../auth/view/get_started_screen.dart';
-import '../../home/manager/category_cubit/category_cubit.dart';
-import '../../home/manager/user_cubit/user_cubit.dart';
 import '../../home/view/AppHomeScreen.dart';
+import '../../profile/manager/user_cubit/user_cubit.dart';
 import 'on_boarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -43,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
         // check is logged in
         CacheData.accessToken = CacheHelper.getData(key: CacheKeys.accessToken);
         if (CacheData.accessToken != null) {
-          UserCubit.get(context).getUserDataFromApi().then((bool result) {
+          UserCubit.get(context).getUserData().then((bool result) {
             if (result) {
               MyNavigator.goTo(screen: AppHomeScreen(), isReplace: true);
             } else {
