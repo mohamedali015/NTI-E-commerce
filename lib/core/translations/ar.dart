@@ -18,4 +18,18 @@ Map<String, String> ar = {
   TranslationKeys.description: "ابحث عنه هنا، اشتريه الآن!",
   TranslationKeys.login: "تسجيل الدخول",
   TranslationKeys.register: "تسجيل",
+
+  // validators
+  TranslationKeys.nameRequired: 'الاسم مطلوب',
+  TranslationKeys.nameLength: 'يجب أن يكون الاسم مكونًا من 3 أحرف على الأقل',
+  TranslationKeys.emailRequired: 'البريد الإلكتروني مطلوب',
+  TranslationKeys.emailValid: 'أدخل عنوان بريد إلكتروني صالح',
+  TranslationKeys.passwordRequired: 'كلمة المرور مطلوبة',
+  TranslationKeys.passwordLength:
+      'يجب أن تكون كلمة المرور مكونة من 6 أحرف على الأقل',
+  TranslationKeys.confirmPasswordRequired: 'تأكيد كلمة المرور مطلوب',
+  TranslationKeys.passwordNotMatch: 'كلمات المرور غير متطابقة',
+  TranslationKeys.phoneRequired: 'رقم الهاتف مطلوب',
+  TranslationKeys.phoneValid: 'أدخل رقم هاتف صالح مكون من 11 رقمًا',
+  TranslationKeys.fillAllFields: 'يرجى ملء جميع الحقول',
 };

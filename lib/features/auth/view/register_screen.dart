@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:nti_ecommerce/core/helper/my_navigator.dart';
+import 'package:nti_ecommerce/core/helper/my_snackbar.dart';
+import 'package:nti_ecommerce/core/shared_widgets/app_text_field.dart';
 import 'package:nti_ecommerce/features/auth/manager/register_cubit/register_cubit.dart';
 import 'package:nti_ecommerce/features/auth/view/login_screen.dart';
 
 import '../../../core/helper/my_responsive.dart';
 import '../../../core/shared_widgets/app_elevated_button.dart';
 import '../../../core/shared_widgets/app_svg.dart';
-import '../../../core/shared_widgets/app_text_field.dart';
 import '../../../core/shared_widgets/loading_view.dart';
 import '../../../core/translations/translation_keys.dart';
 import '../../../core/utils/app_assets.dart';
@@ -49,22 +50,13 @@ class RegisterScreen extends StatelessWidget {
                   BlocConsumer<RegisterCubit, RegisterState>(
                     listener: (context, state) {
                       if (state is RegisterSuccessState) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(state.message!),
-                            backgroundColor: AppColors.primary,
-                          ),
-                        );
+                        MySnackbar.success(context, state.message.toString());
                         MyNavigator.goTo(
                             screen: LoginScreen(), isReplace: true);
                       }
 
                       if (state is RegisterErrorState) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(state.error),
-                          ),
-                        );
+                        MySnackbar.error(context, state.error.toString());
                       }
                     },
                     builder: (context, state) {
@@ -74,114 +66,49 @@ class RegisterScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             AppTextField(
-                              labelText: TranslationKeys.name.tr,
-                              controller: registerCubit.nameController,
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return 'Name is required';
-                                } else if (value.length < 2) {
-                                  return 'Name must be at least 2 characters';
-                                }
-                                return null;
-                              },
-                              prefixIcon: Icon(Icons.person),
+                                type: TextFieldType.name,
+                                controller: registerCubit.nameController),
+                            SizedBox(
+                              height: MyResponsive.height(context, value: 10),
+                            ),
+                            AppTextField(
+                                type: TextFieldType.phone,
+                                controller: registerCubit.phoneController),
+                            SizedBox(
+                              height: MyResponsive.height(context, value: 10),
+                            ),
+                            AppTextField(
+                                type: TextFieldType.email,
+                                controller: registerCubit.emailController),
+                            SizedBox(
+                              height: MyResponsive.height(context, value: 10),
+                            ),
+                            AppTextField(
+                              type: TextFieldType.password,
+                              controller: registerCubit.passwordController,
+                              obsecure: registerCubit.obscureText,
+                              onSuffixTapped:
+                                  registerCubit.onPasswordSuffixIconPressed,
                             ),
                             SizedBox(
                               height: MyResponsive.height(context, value: 10),
                             ),
                             AppTextField(
-                              labelText: TranslationKeys.phone.tr,
-                              controller: registerCubit.phoneController,
-                              keyboardType: TextInputType.phone,
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return 'Phone number is required';
-                                } else if (!RegExp(r'^(01)[0-9]{9}$')
-                                    .hasMatch(value)) {
-                                  return 'Enter a valid Egyptian phone number';
-                                }
-                                return null;
-                              },
-                              prefixIcon: Icon(Icons.phone),
+                              type: TextFieldType.password,
+                              controller:
+                                  registerCubit.confirmPasswordController,
+                              obsecure: registerCubit.confirmObscureText,
+                              onSuffixTapped: registerCubit
+                                  .onConfirmPasswordSuffixIconPressed,
+                              passController: registerCubit.passwordController,
                             ),
-                            SizedBox(
-                              height: MyResponsive.height(context, value: 10),
-                            ),
-                            AppTextField(
-                              labelText: TranslationKeys.email.tr,
-                              controller: registerCubit.emailController,
-                              keyboardType: TextInputType.emailAddress,
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return 'Email is required';
-                                } else if (!RegExp(
-                                        r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
-                                    .hasMatch(value)) {
-                                  return 'Enter a valid email';
-                                }
-                                return null;
-                              },
-                              prefixIcon: Icon(Icons.email),
-                            ),
-                            SizedBox(
-                              height: MyResponsive.height(context, value: 10),
-                            ),
-                            AppTextField(
-                                labelText: TranslationKeys.password.tr,
-                                controller: registerCubit.passwordController,
-                                obscureText: registerCubit.obscureText,
-                                prefixIcon: Icon(Icons.lock),
-                                suffixIcon: IconButton(
-                                  onPressed:
-                                      registerCubit.onPasswordSuffixIconPressed,
-                                  icon: Icon(
-                                    registerCubit.obscureText
-                                        ? Icons.visibility
-                                        : Icons.visibility_off,
-                                  ),
-                                ),
-                                validator: (value) {
-                                  if (value == null || value.isEmpty) {
-                                    return 'Password is required';
-                                  } else if (value.length < 6) {
-                                    return 'Password must be at least 6 characters';
-                                  }
-                                  return null;
-                                }),
-                            SizedBox(
-                              height: MyResponsive.height(context, value: 10),
-                            ),
-                            AppTextField(
-                                labelText: TranslationKeys.confirmPassword.tr,
-                                controller:
-                                    registerCubit.confirmPasswordController,
-                                obscureText: registerCubit.confirmObscureText,
-                                prefixIcon: Icon(Icons.lock),
-                                suffixIcon: IconButton(
-                                  onPressed: registerCubit
-                                      .onConfirmPasswordSuffixIconPressed,
-                                  icon: Icon(
-                                    registerCubit.confirmObscureText
-                                        ? Icons.visibility
-                                        : Icons.visibility_off,
-                                  ),
-                                ),
-                                validator: (value) {
-                                  if (value == null || value.isEmpty) {
-                                    return 'Confirm password is required';
-                                  } else if (value !=
-                                      registerCubit.passwordController.text) {
-                                    return 'Passwords do not match';
-                                  }
-                                  return null;
-                                }),
                             SizedBox(
                               height: MyResponsive.height(context, value: 20),
                             ),
                             Text(
                               TranslationKeys.politics.tr,
-                              style: AppTextStyles.Regular_W400_12(context)
-                                  .copyWith(color: AppColors.darkGray),
+                              style: AppTextStyles.Regular_W400_12(context,
+                                  color: AppColors.darkGray),
                             ),
                             SizedBox(
                               height: MyResponsive.height(context, value: 26),

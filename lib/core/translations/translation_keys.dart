@@ -40,6 +40,20 @@ abstract class TranslationKeys {
   static const String politics =
       "By clicking the Register button, you agree\nto the public offer";
 
+  // validators
+  static const String nameRequired = 'Name is required';
+  static const String nameLength = 'Name must be at least 3 characters long';
+  static const String emailRequired = 'Email is required';
+  static const String emailValid = 'Enter a valid email address';
+  static const String passwordRequired = 'Password is required';
+  static const String passwordLength =
+      'Password must be at least 6 characters long';
+  static const String confirmPasswordRequired = 'Confirm password is required';
+  static const String passwordNotMatch = 'Passwords do not match';
+  static const String phoneRequired = 'Phone number is required';
+  static const String phoneValid = 'Enter a valid 11-digit phone number';
+  static const String fillAllFields = 'Please fill all fields';
+
   // home screen
   static const String home = "Home";
   static const String items = "Items";
