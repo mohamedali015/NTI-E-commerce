@@ -2,17 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:nti_ecommerce/core/utils/app_theme.dart';
-import 'package:nti_ecommerce/features/auth/view/get_started_screen.dart';
-import 'package:nti_ecommerce/features/auth/view/login_screen.dart';
-import 'package:nti_ecommerce/features/auth/view/register_screen.dart';
 import 'package:nti_ecommerce/features/splash_and_onboarding/view/splash_screen.dart';
 
 import 'core/cache/cache_data.dart';
 import 'core/cache/cache_helper.dart';
 import 'core/translations/translation_helper.dart';
-import 'features/home/manager/category_cubit/category_cubit.dart';
 import 'features/home/manager/user_cubit/user_cubit.dart';
-import 'features/splash_and_onboarding/view/on_boarding_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
