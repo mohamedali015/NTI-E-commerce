@@ -48,3 +48,6 @@ class UserDeleteError extends UserState {
 }
 
 class UserDeleteLoading extends UserState {}
+
+// change language state
+class UserChangeLanguageState extends UserState {}

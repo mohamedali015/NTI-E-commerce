@@ -51,6 +51,7 @@ Map<String, String> ar = {
   TranslationKeys.searchHint: "ابحث عن أي منتج..",
   TranslationKeys.allFeatured: "جميع المميز",
   TranslationKeys.recommended: "موصى به",
+  TranslationKeys.profile: "الملف الشخصي",
 
   // profile screen
   TranslationKeys.myProfile: "ملفي الشخصي",
@@ -58,9 +59,12 @@ Map<String, String> ar = {
   TranslationKeys.myFavorites: "مفضلتي",
   TranslationKeys.settings: "الإعدادات",
   TranslationKeys.logout: "تسجيل الخروج",
-  TranslationKeys.logoutMessage: "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+  TranslationKeys.deleteAccountMessage: "هل أنت متأكد أنك تريد حذف الحساب؟",
   TranslationKeys.cancel: "إلغاء",
   TranslationKeys.confirm: "تأكيد",
   TranslationKeys.save: "حفظ",
   TranslationKeys.deleteAccount: "حذف الحساب",
+  TranslationKeys.language: "اللغة",
+  TranslationKeys.en: "EN",
+  TranslationKeys.ar: "AR",
 };

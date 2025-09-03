@@ -14,6 +14,7 @@ class AppAppBar {
       leading: InkWell(
         onTap: () => Navigator.pop(context),
         child: MyRotator(icon: AppAssets.forwardArrow),
+        // child: Icon(Icons.arrow_back),
       ),
     );
   }

@@ -59,8 +59,12 @@ Map<String, String> en = {
   TranslationKeys.settings: "Settings",
   TranslationKeys.logout: "Logout",
   TranslationKeys.deleteAccount: "Delete Account",
-  TranslationKeys.logoutMessage: "Are you sure you want to logout?",
+  TranslationKeys.deleteAccountMessage:
+      "Are you sure you want to delete your account?",
   TranslationKeys.cancel: "Cancel",
   TranslationKeys.save: "Save",
   TranslationKeys.confirm: "Confirm",
+  TranslationKeys.language: "Language",
+  TranslationKeys.en: "EN",
+  TranslationKeys.ar: "AR",
 };

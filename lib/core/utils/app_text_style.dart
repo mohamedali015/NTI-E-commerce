@@ -64,6 +64,16 @@ abstract class AppTextStyles {
         color: color,
       );
 
+  static TextStyle Medium_W500_20(
+    BuildContext context, {
+    Color color = AppColors.black,
+  }) =>
+      TextStyle(
+        fontSize: MyResponsive.fontSize(context, value: 20),
+        fontWeight: FontWeight.w500,
+        color: color,
+      );
+
   static TextStyle SemiBold_W600_12(
     BuildContext context, {
     Color color = AppColors.black,

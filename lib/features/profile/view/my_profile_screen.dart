@@ -86,14 +86,14 @@ class MyProfileScreen extends StatelessWidget {
                       }
                     },
                     child: AppElevatedButton(
-                      buttonText: TranslationKeys.save,
+                      buttonText: TranslationKeys.save.tr,
                       onPressed: userCubit.updateUserData,
                       foregroundColor: AppColors.white,
                     ),
                   ),
                   SizedBox(height: MyResponsive.height(context, value: 300)),
                   AppElevatedButton(
-                    buttonText: TranslationKeys.deleteAccount,
+                    buttonText: TranslationKeys.deleteAccount.tr,
                     onPressed: () {
                       showCupertinoDialog(
                         context: context,
