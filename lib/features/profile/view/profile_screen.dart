@@ -27,12 +27,7 @@ class ProfileScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ProfileImageWidget(
-              image: UserCubit.get(context).userModel.imagePath != null
-                  ? Image.network(
-                      UserCubit.get(context).userModel.imagePath!,
-                      fit: BoxFit.cover,
-                    )
-                  : null,
+              imagePath: UserCubit.get(context).userModel.imagePath,
             ),
             SizedBox(height: MyResponsive.height(context, value: 20)),
             Text(

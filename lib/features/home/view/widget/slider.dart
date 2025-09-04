@@ -69,7 +69,7 @@ class AppSlider extends StatelessWidget {
                                 Text(
                                   slider.title ?? "",
                                   style: AppTextStyles.Bold_W700_20(context)
-                                      .copyWith(color: Colors.white),
+                                      .copyWith(color: Colors.black54),
                                 ),
                                 SizedBox(
                                   height:
@@ -78,7 +78,7 @@ class AppSlider extends StatelessWidget {
                                 Text(
                                   slider.description ?? "",
                                   style: AppTextStyles.Regular_W400_12(context)
-                                      .copyWith(color: Colors.white),
+                                      .copyWith(color: Colors.black54),
                                 ),
                                 SizedBox(
                                   height:
@@ -92,14 +92,14 @@ class AppSlider extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5),
                                       border: Border.all(
-                                        color: AppColors.white,
+                                        color: Colors.black54,
                                         width: 1,
                                       )),
                                   child: Text(
                                     "Shop Now",
                                     style:
                                         AppTextStyles.SemiBold_W600_12(context)
-                                            .copyWith(color: Colors.white),
+                                            .copyWith(color: Colors.black54),
                                   ),
                                 )
                               ],
