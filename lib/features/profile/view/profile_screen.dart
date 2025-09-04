@@ -27,12 +27,7 @@ class ProfileScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ProfileImageWidget(
-              image: UserCubit.get(context).userModel.imagePath != null
-                  ? Image.network(
-                      UserCubit.get(context).userModel.imagePath!,
-                      fit: BoxFit.cover,
-                    )
-                  : null,
+              imagePath: UserCubit.get(context).userModel.imagePath,
             ),
             SizedBox(height: MyResponsive.height(context, value: 20)),
             Text(
@@ -42,25 +37,25 @@ class ProfileScreen extends StatelessWidget {
             ),
             SizedBox(height: MyResponsive.height(context, value: 56)),
             ProfileRowWidget(
-              title: TranslationKeys.myProfile,
+              title: TranslationKeys.myProfile.tr,
               imagePath: AppAssets.profilePerson,
               goTo: MyProfileScreen(),
             ),
             SizedBox(height: MyResponsive.height(context, value: 38)),
             ProfileRowWidget(
-              title: TranslationKeys.myOrders,
+              title: TranslationKeys.myOrders.tr,
               imagePath: AppAssets.profileShopping,
               goTo: MyOrdersScreen(),
             ),
             SizedBox(height: MyResponsive.height(context, value: 38)),
             ProfileRowWidget(
-              title: TranslationKeys.myFavorites,
+              title: TranslationKeys.myFavorites.tr,
               imagePath: AppAssets.profileFavorite,
               goTo: MyFavoritesScreen(),
             ),
             SizedBox(height: MyResponsive.height(context, value: 38)),
             ProfileRowWidget(
-              title: TranslationKeys.settings,
+              title: TranslationKeys.settings.tr,
               imagePath: AppAssets.profileSettings,
               goTo: SettingsScreen(),
             ),

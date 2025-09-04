@@ -73,7 +73,12 @@ abstract class TranslationKeys {
   static const String myFavorites = "My Favorites";
   static const String settings = "Settings";
   static const String logout = "Log Out";
-  static const String logoutMessage = "Are you sure you want to log out?";
+  static const String deleteAccountMessage =
+      "Are you sure you want to delete account?";
   static const String cancel = "Cancel";
   static const String confirm = "Confirm";
+  static const String language = "Language";
+  static const String en = "EN";
+
+  static const String ar = "AR";
 }

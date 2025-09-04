@@ -28,16 +28,20 @@ class TranslationHelper implements Translations {
   static changeLanguage(bool isAr) async {
     if (isAr) {
       await CacheHelper.saveData(
-          key: CacheKeys.langKey, value: CacheKeys.keyAR);
-      await Get.updateLocale(TranslationKeys.localeAR);
+        key: CacheKeys.langKey,
+        value: CacheKeys.keyAR,
+      );
+
       CacheData.lang = CacheKeys.keyAR;
+      await Get.updateLocale(TranslationKeys.localeAR);
     } else {
       await CacheHelper.saveData(
         key: CacheKeys.langKey,
         value: CacheKeys.keyEN,
       );
-      await Get.updateLocale(TranslationKeys.localeEN);
+
       CacheData.lang = CacheKeys.keyEN;
+      await Get.updateLocale(TranslationKeys.localeEN);
     }
   }
 }

@@ -9,8 +9,8 @@ class ShowingDialogWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoAlertDialog(
-      title: Text(TranslationKeys.logout.tr),
-      content: Text(TranslationKeys.logoutMessage.tr),
+      title: Text(TranslationKeys.deleteAccount.tr),
+      content: Text(TranslationKeys.deleteAccountMessage.tr),
       actions: [
         CupertinoDialogAction(
           onPressed: () {

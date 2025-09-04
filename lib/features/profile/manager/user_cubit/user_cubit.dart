@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:nti_ecommerce/core/translations/translation_helper.dart';
 import 'package:nti_ecommerce/core/translations/translation_keys.dart';
 import 'package:nti_ecommerce/features/profile/data/repo/user_repo.dart';
 
@@ -22,6 +23,15 @@ class UserCubit extends Cubit<UserState> {
   final TextEditingController phoneController = TextEditingController();
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
+  // language
+  bool isEnglish = true;
+
+  void changeLanguage() async {
+    isEnglish = !isEnglish;
+    await TranslationHelper.changeLanguage(!isEnglish);
+    emit(UserChangeLanguageState());
+  }
 
   /// Data
   UserModel userModel = UserModel();

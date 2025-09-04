@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -45,22 +44,13 @@ class MyProfileScreen extends StatelessWidget {
                       },
                       pickedBody: (XFile imageFile) {
                         return ProfileImageWidget(
-                          image: Image.file(
-                            File(imageFile.path),
-                            fit: BoxFit.cover,
-                            width: MyResponsive.width(context, value: 100),
-                          ),
+                          imagePath: imageFile.path,
+                          width: MyResponsive.width(context, value: 100),
                         );
                       },
                       unPickedBody: ProfileImageWidget(
-                        image: userCubit.userModel.imagePath != null
-                            ? Image.network(
-                                userCubit.userModel.imagePath!,
-                                fit: BoxFit.cover,
-                                width: MyResponsive.width(context, value: 100),
-                              )
-                            : null,
-                      ),
+                          imagePath: userCubit.userModel.imagePath,
+                          width: MyResponsive.width(context, value: 100)),
                     ),
                   ),
                   SizedBox(height: MyResponsive.height(context, value: 66)),
@@ -86,14 +76,14 @@ class MyProfileScreen extends StatelessWidget {
                       }
                     },
                     child: AppElevatedButton(
-                      buttonText: TranslationKeys.save,
+                      buttonText: TranslationKeys.save.tr,
                       onPressed: userCubit.updateUserData,
                       foregroundColor: AppColors.white,
                     ),
                   ),
                   SizedBox(height: MyResponsive.height(context, value: 300)),
                   AppElevatedButton(
-                    buttonText: TranslationKeys.deleteAccount,
+                    buttonText: TranslationKeys.deleteAccount.tr,
                     onPressed: () {
                       showCupertinoDialog(
                         context: context,
